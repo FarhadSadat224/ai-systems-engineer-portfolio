@@ -1,6 +1,22 @@
 # AI Systems Engineer Portfolio + RAG Lab
 
-A responsive AI engineering portfolio with an interactive retrieval-augmented generation (RAG) demonstration. It presents production AI capabilities, selected systems, delivery methodology, responsible-AI practices, and a hands-on pipeline experience in one deployable web application.
+![AI that works in the wild](./public/og.png)
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Build](https://github.com/FarhadSadat224/ai-systems-engineer-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/FarhadSadat224/ai-systems-engineer-portfolio/actions/workflows/ci.yml)
+
+An interactive AI engineering portfolio that demonstrates how I approach LLM products, agentic workflows, predictive machine learning, responsible AI, and production delivery. Its flagship experience is a transparent RAG workbench that exposes the steps between a user question and a grounded, evidence-backed answer.
+
+> **Portfolio prototype:** The interface is fully interactive and intentionally uses deterministic sample responses. No model credentials are exposed in the browser. The production extension is documented below.
+
+## Portfolio highlights
+
+- **Product thinking:** translates an operational question into an observable AI workflow
+- **Engineering quality:** typed components, accessible controls, responsive layouts, and reproducible builds
+- **Responsible AI:** makes citations, confidence, validation, and prompt-injection checks visible
+- **Production path:** documents the API, retrieval, vector database, model-routing, evaluation, and monitoring layers
 
 ## What I built
 
@@ -22,7 +38,20 @@ A responsive AI engineering portfolio with an interactive retrieval-augmented ge
 | Components | shadcn + Base UI | Accessible interface primitives |
 | Icons | Lucide React | Consistent interface iconography |
 | Runtime | Cloudflare Workers-compatible ESM | Edge-ready deployment output |
-| Hosting | OpenAI Sites | Private production deployment |
+| Hosting | OpenAI Sites | Cloudflare-compatible private deployment |
+
+## Experience the project
+
+The repository is self-contained and can be run locally without an API key. Try the suggested questions or enter your own prompt to see the retrieval pipeline states, grounded response, evidence scores, and safety indicators.
+
+```bash
+git clone https://github.com/FarhadSadat224/ai-systems-engineer-portfolio.git
+cd ai-systems-engineer-portfolio
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000`.
 
 ## How the demo works
 
@@ -105,6 +134,8 @@ Create the production build:
 ```bash
 npm run build
 ```
+
+Every push to `main` is also checked by GitHub Actions to confirm that dependencies install cleanly and the production build succeeds.
 
 ## How to explain this project in an interview
 
